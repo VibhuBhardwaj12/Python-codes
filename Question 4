@@ -1,0 +1,26 @@
+def char_info(char):
+    if char.isalpha():
+        if char.islower():
+            print(f"The character is a lowercase letter.")
+        elif char.isupper():
+            print(f"The character is an uppercase letter.")
+    elif char.isdigit():
+        print(f"The character is a numeric digit.")
+        print_digit_name(char)
+    else:
+        print(f"The character is a special character.")
+
+def print_digit_name(digit):
+    digit_names = {
+        '0': 'ZERO', '1': 'ONE', '2': 'TWO', '3': 'THREE', '4': 'FOUR',
+        '5': 'FIVE', '6': 'SIX', '7': 'SEVEN', '8': 'EIGHT', '9': 'NINE'
+    }
+    print(f"The numeric digit name is {digit_names[digit]}.")
+
+
+char = input("Enter a character: ")
+
+if len(char) == 1:
+    char_info(char)
+else:
+    print("Please enter only one character.")
