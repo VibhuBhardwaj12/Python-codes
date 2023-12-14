@@ -1,0 +1,9 @@
+def generate_cube_dictionary():
+    cube_dict = {}
+    for num in range(1, 6):
+        cube_dict[num] = num ** 3
+    return cube_dict
+
+# Example usage:
+result_dict = generate_cube_dictionary()
+print(result_dict)
