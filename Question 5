@@ -1,0 +1,41 @@
+string=input("Enter any string")
+count=0
+n=input("Enter the character whose frequency is to be found")
+for i in string:
+    if i==n:
+        count+=1
+print("The character",n,"appears",count,"times")
+
+
+ii part//
+
+string=input("Enter any string")
+n=input("Enter the character to be replaced")
+m=input("Enter the new character")
+res_str= ""
+for i in string:
+    if i==n:
+        res_str+=m
+    else:
+        res_str += i
+print("String after replacement is", res_str)
+
+iii part//
+
+string=input("Enter any string")
+n=input("Enter the character whose first occurrence needs to be removed")
+for i in range(0,len(string)):
+    if string[i]==n:
+        break
+newstr=string[:i]+ string[i+1:]
+print("The new string is",newstr)
+
+iv part//
+
+string=input("Enter any string")
+n=input("Enter the character whose first occurrence needs to be removed")
+for i in range(0,len(string)):
+    if string[i]==n:
+        
+        newstr=string[:i]+ string[i+1:]
+print("The new string is",newstr)
