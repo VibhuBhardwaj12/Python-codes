@@ -1,0 +1,50 @@
+f1=open("Myfile.txt","r")
+data=f1.read()
+
+
+ i//
+totalch=len(data)
+totalwords=1
+total_lines=1
+for i in data:
+  if i =="":
+    totalwords+=1
+  elif i=="\n":
+    total_lines+=1
+print("No of characters",totalch)
+print("No of words", totalwords)
+print("No of sentences:",total_lines)
+
+
+ii//
+dict={}
+for i in data:
+  if i in data:
+    if i in dict:
+      dict[i]+=1
+    else:
+      dict[i]=1
+print(dict)
+
+
+iii//
+reverse=data[::-1]
+print(reverse)
+f1.close()
+
+iv//
+f2=open("file1.txt","w")
+f3=open("file2.txt","w")
+f1=open("Myfile.txt","r")
+record=f1.readlines()
+for i in range(0,len(record)):
+  if i%2==0:
+    f3.write(record[i])
+  else:
+    f2.write(record[i])
+f1.close()
+f2.close()
+f3.close()
+
+
+
