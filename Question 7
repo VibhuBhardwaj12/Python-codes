@@ -1,0 +1,26 @@
+def find_occurrences(main_string, sub_string):
+    indices = []
+    start = 0
+
+    while True:
+        index = main_string.find(sub_string, start)
+        if index == -1:
+            break
+        indices.append(index)
+        start = index + 1
+        if indices:
+            return indices
+        else:
+            return -1
+
+
+main_str = input("Enter the main string: ")
+sub_str = input("Enter the substring to find: ")
+
+result = find_occurrences(main_str, sub_str)
+
+if result == -1:
+    print(f"The substring '{sub_str}' is not present in the main string.")
+else:
+    print(f"The substring '{sub_str}' is present at the following indices: {result}")
+
