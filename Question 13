@@ -1,0 +1,11 @@
+def validate_name(name):
+    for char in name:
+        if not char.isalpha() and char != ' ':
+            raise ValueError("Invalid characters in the name. Please enter only letters and spaces.")
+
+try:
+    user_input = input("Enter your name: ")
+    validate_name(user_input)
+    print(f"Hello, {user_input}!")
+except ValueError as e:
+    print(f"Error: {e}")
